@@ -20,11 +20,10 @@ const ChatBox: FC<ChatBoxProps> = ({ chat, chats, currentUserId, messages, onSen
     <div className='bg-gray-50 p-4'>
       <h2 className='text-lg font-semibold'>{chat.username}</h2>
       <div className='border rounded-md p-4'>
-        <p>{chatIds} - {userIds}</p>
         {filteredMessages.map((message: Message) => (
           <div key={message.id} className='mb-2'>
             <div className='text-sm font-semibold'>{message.senderUsername}</div>
-            <div>{message.content} ({message.chatId} = {message.userId})</div>
+            <div>{message.content}</div>
           </div>
         ))}
       </div>
